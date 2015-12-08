@@ -1,0 +1,35 @@
+<!-- The HTML Form
+
+<form action="/users" method="post" accept-charset="UTF-8">
+  <label for="username">Username:</label><br>
+  <input type="text" name="user[username]" id="user[name]"><br>
+  <label for="email">Email:</label><br>
+  <input type="email" name="user[email]" id="user[email]"><br>
+  <label for="password">Password:</label><br>
+  <input type="password" name="user[password]" id="user[password]">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <br><input type="submit" value="Submit">
+</form> 
+
+Railsy Forms 
+
+<%= form_tag("/users") do %>
+  <%= label_tag(:username, "Username :") %><br>
+  <%= text_field(:user, :username) %><br>
+  <%= label_tag(:email, "Email :") %><br>
+  <%= text_field(:user, :email) %><br>
+  <%= label_tag(:password, "Password :") %><br>
+  <%= password_field(:user, :password) %><br>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+-->
+
+<!-- Railsy-er Forms -->
+
+<%= form_for @user do |f| %>
+  Username<br><%= f.text_field :username %><br>
+  Email<br><%= f.text_field :email %><br>
+  Password<br><%= f.password_field :password %><br>
+  <%= f.submit "Update" %>
+<% end %>
