@@ -11,7 +11,7 @@
   <br><input type="submit" value="Submit">
 </form> -->
 
-<!-- Railsy Forms -->
+<!-- Railsy Forms 
 
 <%= form_tag("/users") do %>
   <%= label_tag(:username, "Username :") %><br>
@@ -21,4 +21,15 @@
   <%= label_tag(:password, "Password :") %><br>
   <%= password_field(:user, :password) %><br>
   <%= submit_tag("Submit") %>
+<% end %>
+
+-->
+
+<!-- Railsy-er Forms -->
+
+<%= form_for @user do |f| %>
+  Username<br><%= f.text_field :username %><br>
+  Email<br><%= f.text_field :email %><br>
+  Password<br><%= f.password_field :password %><br>
+  <%= f.submit "Submit" %>
 <% end %>
