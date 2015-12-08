@@ -28,8 +28,17 @@ Railsy Forms
 <!-- Railsy-er Forms -->
 
 <%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <ul>
+      <% @user.errors.full_messages.each do |error| %>
+      <li>
+        <%= error %>
+      </li>
+      <% end %>
+    </ul>
+  <% end %>
   Username<br><%= f.text_field :username %><br>
   Email<br><%= f.text_field :email %><br>
-  Password<br><%= f.password_field :password %><br>
+  Password<br><%= f.password_field :password, placeholder: "*******" %><br>
   <%= f.submit "Update" %>
 <% end %>

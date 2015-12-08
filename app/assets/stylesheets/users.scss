@@ -6,17 +6,12 @@
 *:after {
    box-sizing: border-box;
 }
-form {
-  border: 1px solid #c6c7cc;
-  border-radius: 5px;
-  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow: hidden;
-  width: 240px;
-  margin: auto;
-}
 
-input {
-  border-radius: 5px;
-  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 0;
+form{
+    width: 450px;
+    font-size: 26px;
+    background: #495C70;
+    padding: 60px;
+    border: 10px solid #53687E;
+    margin: auto;
 }
